@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val webView: WebView = findViewById(R.id.webViewWidget)
 
+        webView.settings.javaScriptEnabled = true
         webView.webViewClient = WebViewClient()
         webView.loadUrl("http://localhost:16097")
     }

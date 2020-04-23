@@ -51,6 +51,7 @@ embed the webview, you will need to:
     ```kotlin
     val webView: WebView = findViewById(R.id.webViewWidget)
     
+    webView.settings.javaScriptEnabled = true
     webView.webViewClient = WebViewClient()
     webView.loadUrl("http://localhost:16097")
     ```
@@ -60,3 +61,9 @@ embed the webview, you will need to:
 
 Thanks to the following sources:
 - [Diamantidis Guide to running Ktor on Android](https://diamantidis.github.io/2019/11/10/running-an-http-server-on-an-android-app)
+
+# Caveats
+
+This app has been tested against SDK version 26 (Android 8.0). However, according to 
+[some sources](https://caniuse.com/#feat=websockets), websockets are supported in Android 4.4 and higher.
+YMMV.
