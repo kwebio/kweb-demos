@@ -4,8 +4,12 @@ can also load the page by navigating to http://localhost:16097 in your phone's b
 
 # How to run Kweb in an android app
 
-1) add the [Jitpack](https://jitpack.io/) repo (`maven { url 'https://jitpack.io' }`) to the project's gradle file.
-2) add the following config options to the `android` section of the app's gradle file:
+1) add the [Jitpack](https://jitpack.io/) repo to the 
+    project's gradle file
+    ([Jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/build.gradle#L22)):
+    `maven { url 'https://jitpack.io' }`
+2) add the following config options to the `android` section of the app's gradle file
+    ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/build.gradle#L25)):
     ```groovy
         packagingOptions {
            exclude 'META-INF/*'
@@ -16,7 +20,7 @@ can also load the page by navigating to http://localhost:16097 in your phone's b
            targetCompatibility = 1.8
        }
     ``` 
-3) add Kweb as a dependency:
+3) add Kweb as a dependency ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/build.gradle#L47)):
     ```groovy
     implementation('com.github.kwebio:core:0.7.0') {
         exclude(module: 'shoebox')
@@ -26,8 +30,11 @@ can also load the page by navigating to http://localhost:16097 in your phone's b
     the app from building 
     (error is `Space characters in SimpleName 'kweb/shoebox/samples/SamplesKt$basic usage 
     sample$usersByEmail$1' are not allowed prior to DEX version 040`)
-4) Add the internet permission to the manifest: `<uses-permission android:name="android.permission.INTERNET"/>`
-5) Run the Kweb server in your main activity:
+4) Add the internet permission to the manifest
+    ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/src/main/AndroidManifest.xml#L4)): 
+    `<uses-permission android:name="android.permission.INTERNET"/>`
+5) Run the Kweb server in your main activity
+    ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/src/main/java/kweb/demo/android/MainActivity.kt#L15)):
     ```kotlin
     Kweb(port = 16097, buildPage = {
         doc.body.new {
