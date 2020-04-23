@@ -51,4 +51,5 @@ dependencies {
     implementation('com.github.kwebio:core:0.7.0') {
         exclude(module: 'shoebox')
     }
+    implementation('com.github.kwebio:shoebox:0.3.1')
 }

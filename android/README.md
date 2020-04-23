@@ -37,8 +37,7 @@ can also load the page by navigating to http://localhost:16097 in your phone's b
 4) Add the internet permission to the manifest
     ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/src/main/AndroidManifest.xml#L4)): 
     `<uses-permission android:name="android.permission.INTERNET"/>`
-5) Run the Kweb server in your main activity
-    ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/src/main/java/kweb/demo/android/MainActivity.kt#L15)):
+5) Run the Kweb server in your main activity:
     ```kotlin
     Kweb(port = 16097, buildPage = {
         doc.body.new {
