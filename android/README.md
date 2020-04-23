@@ -1,6 +1,6 @@
 This project is an android app with embedded [kweb](https://github.com/kwebio/kweb-core) server. 
-The server is running on port 16097. This app contains a webview which loads that page, but you 
-can also load the page by navigating to http://localhost:16097 in your phone's browser.
+The server is running on port 7659. This app contains a webview which loads that page, but you 
+can also load the page by navigating to http://localhost:7659 in your phone's browser.
 
 # How to run Kweb in an android app
 
@@ -39,7 +39,7 @@ can also load the page by navigating to http://localhost:16097 in your phone's b
     `<uses-permission android:name="android.permission.INTERNET"/>`
 5) Run the Kweb server in your main activity:
     ```kotlin
-    Kweb(port = 16097, buildPage = {
+    Kweb(port = 7659, buildPage = {
         doc.body.new {
             h1().text("Hello World!")
         }
