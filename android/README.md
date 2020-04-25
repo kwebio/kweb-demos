@@ -26,14 +26,8 @@ can also load the page by navigating to http://localhost:7659 in your phone's br
     ``` 
 3) add Kweb as a dependency ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/build.gradle#L47)):
     ```groovy
-    implementation('com.github.kwebio:core:0.7.0') {
-        exclude(module: 'shoebox')
-    }
+    implementation('com.github.kwebio:core:0.7.5')
     ```
-    [Shoebox](https://github.com/kwebio/shoebox) must be excluded because it will prevent 
-    the app from building 
-    (error is `Space characters in SimpleName 'kweb/shoebox/samples/SamplesKt$basic usage 
-    sample$usersByEmail$1' are not allowed prior to DEX version 040`)
 4) Add the internet permission to the manifest
     ([jump to code](https://github.com/kwebio/kweb-demos/blob/master/android/app/src/main/AndroidManifest.xml#L4)): 
     `<uses-permission android:name="android.permission.INTERNET"/>`

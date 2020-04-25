@@ -48,8 +48,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation('com.github.kwebio:core:0.7.0') {
-        exclude(module: 'shoebox')
-    }
-    implementation('com.github.kwebio:shoebox:0.3.1')
+    implementation('com.github.kwebio:core:0.7.5')
 }
