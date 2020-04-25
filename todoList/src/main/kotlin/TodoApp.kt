@@ -30,7 +30,7 @@ class TodoApp {
          * UI framework. Build a simple to-do list app listening on
          * http://localhost:7659/
          * */
-        server = Kweb(port = 7659, debug = true, plugins = plugins, buildPage = {
+        server = Kweb(port = 7659, debug = true, plugins = plugins) {
             doc.head.new {
                 // Not required, but recommended by HTML spec
                 meta(name = "Description", content = "A simple To Do list app to demonstrate Kweb")
@@ -87,7 +87,7 @@ class TodoApp {
                     }
                 }
             }
-        })
+        }
     }
 
     private fun ElementCreator<*>.pageBorderAndTitle(title: String, content: ElementCreator<DivElement>.() -> Unit) {

@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
 }
 
 fun helloWorld() {
-    Kweb(port = 16097, buildPage = {
+    Kweb(port = 16097) {
         doc.body.new {
             h1().text("Hello Worlds!")
             ul().new {
@@ -16,5 +16,5 @@ fun helloWorld() {
                 }
             }
         }
-    })
+    }
 }
