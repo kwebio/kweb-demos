@@ -7,7 +7,7 @@ import kweb.state.KVar
 import kweb.state.render
 
 fun main(args: Array<String>) {
-    helloWorld()
+    modalDemo()
 }
 
 fun ElementCreator<*>.doSomethingModal(whenDone:(input:String)->Unit) = modal("Enter a number"){modal->
@@ -26,7 +26,7 @@ fun ElementCreator<*>.doSomethingModal(whenDone:(input:String)->Unit) = modal("E
     }
 }
 
-fun helloWorld() {
+fun modalDemo() {
     Kweb(port = 16097, plugins = listOf(fomanticUIPlugin)) {
 
         val modalResult = KVar("")
@@ -51,7 +51,9 @@ fun helloWorld() {
                             div(fomantic.ui.divider.hidden)
 
                             render(modalResult){result->
-                                p().text("User choice is $result")
+                                if(!result.isBlank()) {
+                                    p().text("User choice is $result")
+                                }
                             }
                         }
                     }
