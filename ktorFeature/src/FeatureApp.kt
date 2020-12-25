@@ -15,7 +15,7 @@ import kweb.state.KVar
 import java.time.Duration
 
 fun main() {
-    embeddedServer(Jetty, port = 16098, module = Application::kwebFeature).start()
+    embeddedServer(Jetty, port = 16097, module = Application::kwebFeature).start()
 }
 
 private fun Application.kwebFeature() {
