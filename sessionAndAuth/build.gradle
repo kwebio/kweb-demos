@@ -1,0 +1,20 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+    id 'application'
+}
+
+mainClassName = "kweb.demos.helloWorld.HelloWorldKt"
+
+sourceSets {
+    main.kotlin.srcDirs += 'src'
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.kwebio:kweb-core:0.10.3'
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+}
