@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-mainClassName = "kweb.demos.helloWorld.HelloWorldKt"
+mainClassName = "kweb.demos.helloWorld.MainKt"
 
 sourceSets {
     main.kotlin.srcDirs += 'src'
